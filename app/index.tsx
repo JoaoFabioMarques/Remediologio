@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { View, Image, Text, StatusBar, StyleSheet } from "react-native";
+import { View, Image, Text, TextInput, StatusBar, StyleSheet } from "react-native";
 import { Link, Redirect } from "expo-router";
 import { useFonts } from "expo-font";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function Home() {
   const [fontsLoaded] = useFonts({
@@ -11,16 +12,23 @@ export default function Home() {
     return <Text>Loading Fonts...</Text>;
   }
   return (
-    <View className="flex-1 bg-white text-black">
-      <StatusBar hidden />
+    <View className="flex bg-white text-black">
+      <StatusBar barStyle="dark-content" />
       <View className="items-center">
-        <View className="flex-row items-center justify-center">
+        <View className="mt-12 items-center justify-center">
           <Image
             source={require("@/assets/images/icons8-alarm-clock-glyph-neue-32.png")}
           />
-          <Text style={styles.rajdhani}>Remédiológio</Text>
+          <Text style={styles.rajdhani} className="text-3xl">
+            Remédiológio
+          </Text>
         </View>
-        <Text style={styles.rajdhani}>Olá, </Text>
+        <View className="mt-6">
+          <Text style={styles.rajdhani} className="text-3xl">
+            Olá!
+          </Text>
+          <TextInput></TextInput>
+        </View>
       </View>
     </View>
   );
