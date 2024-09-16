@@ -27,7 +27,7 @@ export default function Home() {
           <Text style={styles.rajdhani} className="text-3xl">
             Olá!
           </Text>
-          <TextInput></TextInput>
+          <TextInput/>
         </View>
       </View>
     </View>
@@ -39,3 +39,5 @@ const styles = StyleSheet.create({
     fontFamily: "Rajdhani-SemiBold",
   },
 });
+
+
