@@ -1,10 +1,9 @@
-import { useState } from "react";
-import { View, Image, Text, TextInput, StatusBar, StyleSheet } from "react-native";
-import { Link, Redirect } from "expo-router";
+import { View, Text, TextInput, StatusBar, StyleSheet } from "react-native";
+import { Link } from "expo-router";
 import { useFonts } from "expo-font";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
-export default function Home() {
+export default function App() {
   const [fontsLoaded] = useFonts({
     "Rajdhani-SemiBold": require("@/assets/fonts/Rajdhani-SemiBold.ttf"),
   });
@@ -12,23 +11,23 @@ export default function Home() {
     return <Text>Loading Fonts...</Text>;
   }
   return (
-    <View className="flex bg-white text-black">
+    <View className="bg-blue-300 h-full items-center">
       <StatusBar barStyle="dark-content" />
-      <View className="items-center">
-        <View className="mt-12 items-center justify-center">
-          <Image
-            source={require("@/assets/images/icons8-alarm-clock-glyph-neue-32.png")}
-          />
-          <Text style={styles.rajdhani} className="text-3xl">
-            Remédiológio
-          </Text>
-        </View>
-        <View className="mt-6">
-          <Text style={styles.rajdhani} className="text-3xl">
-            Olá!
-          </Text>
-          <TextInput/>
-        </View>
+      <View className="mt-16">
+        <Text style={styles.rajdhani} className="text-3xl">
+          Boas-vindas ao
+        </Text>
+      </View>
+      <View className="flex-row gap-2">
+        <Ionicons
+          name="alarm-outline"
+          size={32}
+          color="white"
+          className="mt-3"
+        />
+        <Text style={styles.rajdhani} className="text-3xl mt-4">
+          Remédiológio
+        </Text>
       </View>
     </View>
   );
@@ -37,7 +36,6 @@ export default function Home() {
 const styles = StyleSheet.create({
   rajdhani: {
     fontFamily: "Rajdhani-SemiBold",
+    color: "#fff",
   },
 });
-
-

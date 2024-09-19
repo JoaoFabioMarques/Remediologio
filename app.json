@@ -4,11 +4,11 @@
     "slug": "Remediologio",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icons8-alarm-clock-glyph-neue-16.png",
+    "icon": "./assets/images/relogio.jpg",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/icons8-alarm-clock-glyph-neue-96.png",
+      "image": "./assets/images/relogio.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -18,14 +18,14 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/icons8-alarm-clock-glyph-neue-72.png",
+        "foregroundImage": "./assets/images/relogio.jpg",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/icons8-alarm-clock-glyph-neue-16.png"
+      "favicon": "./assets/images/relogio.jpg"
     },
     "plugins": [
       ["expo-router"],
