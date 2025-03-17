@@ -4,9 +4,15 @@ import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { router } from "expo-router";
 
-export function Redirecionar(){
+export function RedirecionarEntrar(){
   return(
     router.navigate("../home")
+  );
+}
+
+export function RedirecionarCadastro(){
+  return(
+    router.navigate("../cadastro")
   );
 }
 
@@ -40,7 +46,7 @@ export default function App() {
         <TextInput placeholder="Usuário" className="border border-white bg-white text-black rounded-2xl"/>
         <TextInput placeholder="Senha" className="border border-white bg-white text-black rounded-2xl"/>
         <View className="w-[50%] mt-4 flex justify-between flex-row gap-12 rounded-2xl text-black">
-          <Button title="Entrar" onPress={Redirecionar}/>
+          <Button title="Entrar" onPress={RedirecionarEntrar}/>
           <Button title="Cadastrar"/>
         </View>
       </View>

@@ -1,16 +1,11 @@
 import { useState } from "react";
-import {
-  View,
-  Image,
-  Text,
-  TextInput,
-  StatusBar,
-  StyleSheet,
-} from "react-native";
+import { View, Image, Text, TextInput, StatusBar, StyleSheet,} from "react-native";
 import { Link, Redirect } from "expo-router";
 import { useFonts } from "expo-font";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { router } from "expo-router";
 
 export default function Home() {
   const [fontsLoaded] = useFonts({
