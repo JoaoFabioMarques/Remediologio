@@ -1,4 +1,4 @@
-import { View, Text, TextInput, StatusBar, StyleSheet, Button } from "react-native";
+import { View, Text, TextInput, StatusBar, StyleSheet, Button, TextInputComponent, TextInputBase } from "react-native";
 import { Link } from "expo-router";
 import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -14,6 +14,10 @@ export function RedirecionarCadastro(){
   return(
     router.navigate("../cadastro")
   );
+}
+
+export function HandleNullField(){
+  
 }
 
 export default function App() {
@@ -46,8 +50,8 @@ export default function App() {
         <TextInput placeholder="Usuário" className="border border-white bg-white text-black rounded-2xl"/>
         <TextInput placeholder="Senha" className="border border-white bg-white text-black rounded-2xl"/>
         <View className="w-[50%] mt-4 flex justify-between flex-row gap-12 rounded-2xl text-black">
-          <Button title="Entrar" onPress={RedirecionarEntrar}/>
-          <Button title="Cadastrar"/>
+          <Button title="Entrar" onPress={()=>{HandleNullField(); RedirecionarCadastro(); }}/>
+          <Button title="Cadastrar" onPress={RedirecionarCadastro}/>
         </View>
       </View>
     </View>

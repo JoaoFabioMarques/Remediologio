@@ -3,6 +3,14 @@ import { Link } from "expo-router";
 import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { router } from "expo-router";
+import { RedirecionarEntrar } from ".";
+
+export function RedirecionarIndex(){
+  return(
+    router.navigate("..")
+  );
+}
+
 
 export default function Cadastro() {
     const [fontsLoaded] = useFonts({
@@ -33,8 +41,8 @@ export default function Cadastro() {
         <View className="mt-16 gap-10 w-[50%]">
           <TextInput placeholder="Usuário" className="border border-white bg-white text-black rounded-2xl"/>
           <TextInput placeholder="Senha" className="border border-white bg-white text-black rounded-2xl"/>
-          <View className="w-[50%] mt-4 flex justify-between flex-row gap-12 rounded-2xl text-black">
-            <Button title="Finalizar Cadastro"/>
+          <View className="w-[50%] mt-4 flex flex-row gap-12 rounded-2xl text-black">
+            <Button title="Finalizar Cadastro" onPress={RedirecionarIndex}/>
           </View>
         </View>
       </View>
