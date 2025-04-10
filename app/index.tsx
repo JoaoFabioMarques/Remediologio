@@ -3,8 +3,9 @@ import { Link } from "expo-router";
 import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { router } from "expo-router";
+import { useState } from "react";
 
-export function RedirecionarEntrar(){
+export function RedirecionarHome(){
   return(
     router.navigate("../home")
   );
@@ -16,7 +17,11 @@ export function RedirecionarCadastro(){
   );
 }
 
-export function HandleNullField(){
+
+const login = useState('')
+const senha = useState('') 
+
+function HandleNullField(){
   
 }
 

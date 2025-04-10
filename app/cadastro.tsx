@@ -3,11 +3,10 @@ import { Link } from "expo-router";
 import { useFonts } from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { router } from "expo-router";
-import { RedirecionarEntrar } from ".";
 
 export function RedirecionarIndex(){
   return(
-    router.navigate("..")
+    router.navigate("./index")
   );
 }
 
