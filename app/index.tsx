@@ -17,26 +17,23 @@ export function RedirecionarCadastro(){
   );
 }
 
-export function Login(){
+export function Login() {
+  const [login, setLogin] = useState('');
+  const [senha, setSenha] = useState('');
+  const [erro, setErro] = useState('');
 
-  const [login] = useState('');
-  const [senha] = useState('') ;
-  const [erro, setErro] = useState('') ;
-
-  
-  if(!login || !senha){
-    setErro('Preencha todos os campos.');
-  } else if (senha.length < 8 ) {
-    setErro('Sua senha deve ter pelo menos 8 caracteres.');
-  } else {
-    setErro('');
-    console.log('Login válido!');
+  const validarLogin = () => {
+    if (!login || !senha) {
+      setErro('Preencha todos os campos.');
+    } else if (senha.length < 8) {
+      setErro('Sua senha deve ter pelo menos 8 caracteres.');
+    } else {
+      setErro('');
+      console.log('Login válido!');
     }
-  
+  }
 
-    
-
-}
+};
 
 export default function App() {
   const [fontsLoaded] = useFonts({
